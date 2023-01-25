@@ -13,10 +13,6 @@ public class Client {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public int getSaldo() {
         return saldo;
     }

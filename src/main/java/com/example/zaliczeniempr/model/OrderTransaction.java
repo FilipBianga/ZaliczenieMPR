@@ -5,16 +5,16 @@ import com.example.zaliczeniempr.storage.ClientStorage;
 import java.util.List;
 
 public class OrderTransaction {
-    private ClientStorage clientStorage;
+    private Status status;
     private int newSaldo;
 
-
-    public <R> OrderTransaction(R collect, int value) {
-
+    public OrderTransaction(Status status, int newSaldo) {
+        this.status = status;
+        this.newSaldo = newSaldo;
     }
 
     @Override
     public String toString() {
-        return "idUser: " + clientStorage + " " + "saldo: " + newSaldo;
+        return "Status: " + status + " " + "saldo: " + newSaldo;
     }
 }
