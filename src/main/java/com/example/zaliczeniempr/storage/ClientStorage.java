@@ -28,12 +28,13 @@ public class ClientStorage {
         return client;
     }
 
-    public List<Client> findById(String id) {
-        return clientList
-                .stream()
-                .filter(storage -> storage.getId().equals(id))
-                .findFirst()
-                .stream().toList();
+    public Client findById(String id) {
+        for(Client client : clientList) {
+            if(client.getId() == id) {
+                return client;
+            }
+        }
+        return null;
     }
 
 }

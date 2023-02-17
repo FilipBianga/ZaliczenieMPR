@@ -9,6 +9,14 @@ public class PaymentTransaction {
         this.newSaldo = newSaldo;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public int getNewSaldo() {
+        return newSaldo;
+    }
+
     @Override
     public String toString() {
         return "Status: " + status + " " + "saldo: " + newSaldo;
